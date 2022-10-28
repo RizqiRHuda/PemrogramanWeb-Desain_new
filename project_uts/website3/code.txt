@@ -1,0 +1,10 @@
+<!-- <br><a name="Gallerry"></a><br>
+      <h3 style="text-align: center; text-decoration: underline;"> Gallery</h3>
+      <div class="images">
+        
+            <img src="img/nastar10.jpg" alt="" class="gambar">
+            <img src="img/selai.jpg" alt="" class="gambar">
+            <img src="img/bulatanselai.jpg" alt="" class="gambar">
+            <img src="img/nanas.jpg" alt="" class="gambar">
+       
+      </div> -->

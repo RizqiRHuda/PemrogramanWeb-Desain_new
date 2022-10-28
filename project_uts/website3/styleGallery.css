@@ -1,0 +1,33 @@
+.images{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1cm;
+    margin-top: 2cm;
+   
+
+    
+}
+ 
+#nastar:hover{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#selai:hover{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.gambar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 3cm;
+    margin-top: 1cm;
+    margin-left: -60px;
+    
+}
+.slidegallery{
+  margin-left: 17cm;
+  margin-right: 17.3cm;
+ 
+}
