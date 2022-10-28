@@ -1,0 +1,115 @@
+.card {
+    width: 400px;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: azure;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 100px;
+    margin-bottom: 20px;
+    padding-bottom: 90px;
+    
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 400px;
+    margin-bottom: 80%;
+    float: center;
+    align-items: center;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+
+
+
+  .main1 {
+    height: 100vh;
+    background-color: #3A3845;
+}
+.menu {
+    padding: 10px;
+    background-color: #F5E8C7;
+    height: 10px;
+    color: white;
+    padding-top: 1px;
+    margin-top: 1px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 1px;
+    word-spacing: 20px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-radius:50% ;
+    border: 10px solid white;
+  
+    margin-bottom: 100px;
+}
+
+.main2 {
+    height: 100vh;
+    background-color: #003865;
+}
+body {
+    width: auto;
+    background-color: #3A3845;
+}
+h1{
+    text-align: center;
+}
+.card {
+    width: 400px;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: azure;
+    text-align: left;
+    margin-bottom: 700px;
+   
+  
+    
+}
+
+  .main3 {
+    height: 100vh;
+    background-color: #25316D;
+  }
+
+
+
+
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background-color: black;
+  color: white;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.text-block1 {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background-color: black;
+  color: white;
+  padding-left: 2px;
+  padding-right: 2px;
+  float: left;
+}
