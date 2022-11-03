@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   
-  input[type=text], select {
+  input[type=text]{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -23,10 +23,11 @@
     border-radius: 4px;
     cursor: pointer;
     float: right;
+    margin-top: 5cm;
   }
   
   input[type=submit]:hover {
-    background-color: #59CE8F;
+    background-color: #45a049;
   }
   
   .container {
@@ -53,13 +54,25 @@
     display: table;
     clear: both;
   }
+ 
 
-  .submit{
-    margin-top: 2cm;
-    float: right;
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
   }
   
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
   
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
       width: 100%;

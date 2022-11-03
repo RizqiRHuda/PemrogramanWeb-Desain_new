@@ -4,10 +4,9 @@ include_once("config.php");
 
 if (isset($_POST['update'])) {
     $id = $_POST['id'];
-
     $judul = $_POST['judul'];
     $pengarang = $_POST['pengarang'];
-    $tahun_terbit = $_POST['tahunterbit'];
+    $tahun_terbit = $_POST['tahun_terbit'];
     $penerbit = $_POST['penerbit'];
 
     include_once("config.php");
@@ -21,12 +20,11 @@ if (isset($_POST['update'])) {
 $id = $_GET['id'];
 
 $result = mysqli_query($mysqli, "SELECT * FROM buku WHERE id=$id");
-while ($user_data = mysqli_fetch_array($result)) {
+while ($buku_data = mysqli_fetch_array($result)) {
     $id = $_POST['id'];
-
     $judul = $_POST['judul'];
     $pengarang = $_POST['pengarang'];
-    $tahun_terbit = $_POST['tahunterbit'];
+    $tahun_terbit = $_POST['tahun_terbit'];
     $penerbit = $_POST['penerbit'];
 }
 ?>
@@ -40,27 +38,34 @@ while ($user_data = mysqli_fetch_array($result)) {
     <a href="index.php">Main Utama</a>
     <br><br>
 
-    <form action="add.php" method="POST" name="form1">
-        <table  border="0">
-            <tr>
+    <a href="index.php">Home</a>
+    <br/><br/>
+    
+    <form name="update_user" method="post" action="edit.php">
+        <table border="0">
+            <tr> 
                 <td>Id Buku</td>
-                <td><input type="text" name="id"></td>
+                <td><input type="text" name="id" value=<?php echo $id;?>></td>
             </tr>
-            <tr>
-                <td>Judul</td>
-                <td><input type="text" name="judul"></td>
+            <tr> 
+                <td>judul</td>
+                <td><input type="text" name="judul" value=<?php echo $judul;?>></td>
             </tr>
-            <tr>
-                <td>Pengarang</td>
-                <td><input type="text" name="pengarang"></td>
+            <tr> 
+                <td>pengarang</td>
+                <td><input type="text" name="pengarang" value=<?php echo $pengarang;?>></td>
             </tr>
-            <tr>
+            <tr> 
                 <td>Tahun Terbit</td>
-                <td><input type="text" name="tahun_terbit"></td>
+                <td><input type="text" name="tahun_terbit" value=<?php echo $tahun_terbit;?>></td>
+            </tr>
+            <tr> 
+                <td>Penerbit</td>
+                <td><input type="text" name="penerbit" value=<?php echo $penerbit;?>></td>
             </tr>
             <tr>
-                <td>Penerbit</td>
-                <td><input type="text" name="penerbit"></td>
+                <td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
+                <td><input type="submit" name="update" value="Update"></td>
             </tr>
         </table>
     </form>

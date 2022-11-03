@@ -1,50 +1,20 @@
-<html>
-<head>
-    <title>Add Users</title>
-</head>
- 
-<body>
-    <a href="index.php">Go to Home</a>
-    <br/><br/>
- 
-    <form action="add.php" method="post" name="form1">
-        <table width="25%" border="0">
-            <tr> 
-                <td>Name</td>
-                <td><input type="text" name="name"></td>
-            </tr>
-            <tr> 
-                <td>Email</td>
-                <td><input type="text" name="email"></td>
-            </tr>
-            <tr> 
-                <td>Mobile</td>
-                <td><input type="text" name="mobile"></td>
-            </tr>
-            <tr> 
-                <td></td>
-                <td><input type="submit" name="Submit" value="Add"></td>
-            </tr>
-        </table>
-    </form>
-    
-    <?php
- 
-    // Check If form submitted, insert form data into users table.
-    if(isset($_POST['Submit'])) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $mobile = $_POST['mobile'];
-        
-        // include database connection file
-        include_once("config.php");
-                
-        // Insert user data into table
-        $result = mysqli_query($mysqli, "INSERT INTO users(name,email,mobile) VALUES('$name','$email','$mobile')");
-        
-        // Show message when user added
-        echo "User added successfully. <a href='index.php'>View Users</a>";
+<?php
+require_once 'koneksi.php';
+if (isset($_POST['submit'])) {
+    $judul = $_POST['judul'];
+    $pengarang = $_POST['pengarang'];
+    $tahun_terbit = $_POST['tahun_terbit'];
+    $penerbit = $_POST['penerbit'];
+    // id_produk bernilai '' karena kita set auto increment
+    $q = $conn->query("INSERT INTO buku VALUES ('', '$judul', '$pengarang', '$tahun_terbit','$penerbit')");
+    if ($q) {
+        // pesan jika data tersimpan
+        echo "<script>alert('Data buku berhasil ditambahkan'); window.location.href='index.php'</script>";
+    } else {
+        // pesan jika data gagal disimpan
+        echo "<script>alert('Data buku gagal ditambahkan'); window.location.href='index.php'</script>";
     }
-    ?>
-</body>
-</html>
+} else {
+    // jika coba akses langsung halaman ini akan diredirect ke halaman index
+    header('Location: index.php');
+}

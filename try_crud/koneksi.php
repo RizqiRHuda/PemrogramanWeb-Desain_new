@@ -1,13 +1,7 @@
 <?php
-/**
- * using mysqli_connect for database connection
- */
- 
-$databaseHost = 'localhost';
-$databaseName = 'db_penjualan';
-$databaseUsername = 'root';
-$databasePassword = '';
- 
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
- 
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$db_name = 'koleksi_buku'; // nama databasenya
+$conn = new mysqli($host, $username, $password, $db_name);
 ?>
