@@ -49,7 +49,7 @@ $mahasiswa=query("  SELECT * FROM mahasiswa");
                     <img src="image/<?php echo $row["Gambar"]; ?>" alt="" height="100">
                 </td>
                 <td>
-                    <a href="">Edit</a>
+                    <a href="edit.php?id=<?php echo $row["id"];?>">Edit</a>
                     <a href="hapus.php?id=<?php echo $row["id"];?>"onclick="return confirm('Apakah data ini akan dihapus?')">Hapus</a>
                 </td>
             </tr>

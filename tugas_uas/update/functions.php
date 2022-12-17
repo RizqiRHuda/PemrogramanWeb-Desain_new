@@ -54,11 +54,11 @@ function edit ($data){
     global $conn;
 
     $id = $data["id"];
-    $nama=htmlspecialchars($data["Nama"]);
-    $nim=htmlspecialchars($data["Nim"]);
-    $email=htmlspecialchars($data["Email"]);
-    $jurusan=htmlspecialchars($data["Jurusan"]);
-    $gambar=htmlspecialchars($data["Gambar"]);
+    $nama=htmlspecialchars($data["nama"]);
+    $nim=htmlspecialchars($data["nim"]);
+    $email=htmlspecialchars($data["email"]);
+    $jurusan=htmlspecialchars($data["jurusan"]);
+    $gambar=htmlspecialchars($data["gambar"]);
 
     $query = " UPDATE  mahasiswa SET
                 NAMA = '$nama' ,
